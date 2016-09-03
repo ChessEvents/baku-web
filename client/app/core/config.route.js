@@ -43,8 +43,8 @@
             } );
 
             $urlRouterProvider
-                .when( '/', '/dashboard' )
-                .otherwise( '/dashboard' );
+                .when( '/', '/main-event' )
+                .otherwise( '/main-event' );
 
 
             $stateProvider.state( 'dashboard', {
