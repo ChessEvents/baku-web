@@ -5,6 +5,11 @@
             <h2 class="section-header">Teams</h2>
         </div>
         <div class="col-md-12">
+            <section class="panel panel-default">
+                <div class="panel-body" data-ng-controller="AlertDemoCtrl">
+                    <uib-alert type="info">Detailed team scores coming soon! Thank you for your patience. <i class="zmdi zmdi-favorite color-warning"></i></uib-alert>
+                </div>
+            </section>
             <section class="panel panel-default table-dynamic">
                 <div class="table-filters">
                     <div class="row">
@@ -27,7 +32,7 @@
                             <th>
                                 <div class="th">
                                     Teams
-                                    <span class="fa fa-angle-up" data-ng-click=" order('tname') " data-ng-class="{active: row == 'name'}"></span>
+                                    <span class="fa fa-angle-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
                                     <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
                                 </div>
                             </th>
@@ -87,7 +92,7 @@
                 <div class="col-md-12">
                     <section class="panel panel-default">
                         <div class="panel-body" data-ng-controller="AlertDemoCtrl">
-                            <uib-alert type="warning">* Sorry, these team selections have thrown a couple of little errors in our app, we're working hard to correct them for you. We expect these to be fixed soon! <i class="zmdi zmdi-favorite color-danger"></i></uib-alert>                        
+                            <uib-alert type="warning">* Sorry, these team selections have thrown a couple of little errors in our app, we're working hard to correct them for you. We expect these to be fixed soon! <i class="zmdi zmdi-favorite color-danger"></i></uib-alert>
                         </div>
                     </section>
                 </div>

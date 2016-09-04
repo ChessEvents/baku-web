@@ -24,7 +24,7 @@
 
         $http.get('app/data/teams.json').then( function( data ) {
 
-            data.data.forEach( item => {
+            data.data.forEach( function( item ) {
 
               if( typeof item.score !== 'undefined' ) {
                   $scope.teams.push({
