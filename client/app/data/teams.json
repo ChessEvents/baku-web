@@ -18621,7 +18621,23 @@
   },
   {
     "_id": "57caa83fe9fe93dd1f576d6f",
-    "teamName": "Hemanth's Rooks"
+    "teamName": "Hemanth's Rooks",
+    "score": [
+      {
+        "r1": 29,
+        "r2": 18,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 47
+      }
+    ]
   },
   {
     "_id": "57caa83fe9fe93dd1f576d70",
@@ -18645,7 +18661,23 @@
   },
   {
     "_id": "57caa83fe9fe93dd1f576d71",
-    "teamName": "Non FavouriteTeam"
+    "teamName": "Non FavouriteTeam",
+    "score": [
+      {
+        "r1": 27,
+        "r2": 23,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 50
+      }
+    ]
   },
   {
     "_id": "57caa83fe9fe93dd1f576d72",
@@ -21929,11 +21961,43 @@
   },
   {
     "_id": "57caa840e9fe93dd1f576e17",
-    "teamName": "Chandu Cheers"
+    "teamName": "Chandu Cheers",
+    "score": [
+      {
+        "r1": 29,
+        "r2": 27,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 56
+      }
+    ]
   },
   {
     "_id": "57caa840e9fe93dd1f576e18",
-    "teamName": "Nimzofishes"
+    "teamName": "Nimzofishes",
+    "score": [
+      {
+        "r1": 29,
+        "r2": 24,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 53
+      }
+    ]
   },
   {
     "_id": "57caa840e9fe93dd1f576e19",
@@ -21957,11 +22021,43 @@
   },
   {
     "_id": "57caa840e9fe93dd1f576e1a",
-    "teamName": "Magnus CaruKramnikamura"
+    "teamName": "Magnus CaruKramnikamura",
+    "score": [
+      {
+        "r1": 24,
+        "r2": 21,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 45
+      }
+    ]
   },
   {
     "_id": "57caa840e9fe93dd1f576e1b",
-    "teamName": "Rooks Of Destiny"
+    "teamName": "Rooks Of Destiny",
+    "score": [
+      {
+        "r1": 34,
+        "r2": 23,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 57
+      }
+    ]
   },
   {
     "_id": "57caa840e9fe93dd1f576e1c",
@@ -23365,7 +23461,23 @@
   },
   {
     "_id": "57caa840e9fe93dd1f576e63",
-    "teamName": "Lazio Roma.nia"
+    "teamName": "Lazio Roma.nia",
+    "score": [
+      {
+        "r1": 24,
+        "r2": 22,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 46
+      }
+    ]
   },
   {
     "_id": "57caa840e9fe93dd1f576e64",
@@ -25869,19 +25981,83 @@
   },
   {
     "_id": "57caa841e9fe93dd1f576ee1",
-    "teamName": "Suspicious minds"
+    "teamName": "Suspicious minds",
+    "score": [
+      {
+        "r1": 23,
+        "r2": 32,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 55
+      }
+    ]
   },
   {
     "_id": "57caa841e9fe93dd1f576ee2",
-    "teamName": "fanatastic five"
+    "teamName": "fanatastic five",
+    "score": [
+      {
+        "r1": 21,
+        "r2": 22,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 43
+      }
+    ]
   },
   {
     "_id": "57caa841e9fe93dd1f576ee3",
-    "teamName": "h7 sac"
+    "teamName": "h7 sac",
+    "score": [
+      {
+        "r1": 32,
+        "r2": 27,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 59
+      }
+    ]
   },
   {
     "_id": "57caa841e9fe93dd1f576ee4",
-    "teamName": "Adala Nethi Team Eka"
+    "teamName": "Adala Nethi Team Eka",
+    "score": [
+      {
+        "r1": 31,
+        "r2": 28,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 59
+      }
+    ]
   },
   {
     "_id": "57caa841e9fe93dd1f576ee6",
@@ -27005,6 +27181,66 @@
   },
   {
     "_id": "57caa842e9fe93dd1f576f1f",
-    "teamName": "Yasser's teetotalers"
+    "teamName": "Yasser's teetotalers",
+    "score": [
+      {
+        "r1": 29,
+        "r2": 24,
+        "r3": 0,
+        "r4": 0,
+        "r5": 0,
+        "r6": 0,
+        "r7": 0,
+        "r8": 0,
+        "r9": 0,
+        "r10": 0,
+        "r11": 0,
+        "total": 53
+      }
+    ]
+  },
+  {
+    "_id": "57cbb514f94a59e0272795dc",
+    "teamName": "Tamziania"
+  },
+  {
+    "_id": "57cbb514f94a59e0272795dd",
+    "teamName": "Morphy's Dream"
+  },
+  {
+    "_id": "57cbb514f94a59e0272795da",
+    "teamName": "Chess Fanboy Picks PlaYaRs"
+  },
+  {
+    "_id": "57cbb514f94a59e0272795db",
+    "teamName": "king-sacrifice"
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bc8",
+    "teamName": "Cagnus Marlsen"
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bc9",
+    "teamName": "FionaFTW"
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bca",
+    "teamName": "Oops.."
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bcb",
+    "teamName": "chess wizard 2016"
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bcc",
+    "teamName": "The Masters"
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bcd",
+    "teamName": "The Chess Mastas"
+  },
+  {
+    "_id": "57cbc07d0c7fa88928888bce",
+    "teamName": "Dude Where's my Linc?"
   }
 ]
