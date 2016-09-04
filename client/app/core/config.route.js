@@ -25,15 +25,19 @@
                 return setRoutes( route );
             } );
 
-            $urlRouterProvider
-                .when( '/', '/table/main-event' )
-                .otherwise( '/table/main-event' );
-
+            $stateProvider.state( 'team', {
+                url: '/team/:id',
+                templateUrl: 'app/page/team-details.html'
+            });
 
             $stateProvider.state( 'dashboard', {
                 url: '/dashboard',
                 templateUrl: 'app/dashboard/dashboard.html'
             } );
+
+            $urlRouterProvider
+                .when( '/', '/table/main-event' )
+                .otherwise( '/table/main-event' );
 
         } ] );
 
