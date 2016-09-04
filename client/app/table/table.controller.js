@@ -27,7 +27,7 @@
 
         $http.get('app/data/teams.json').then( function( data ) {
             $scope.teams = data.data;
-            $scope.order( 'teamName' );
+            $scope.order( '' );
         }, function ( error ) {
             console.log( error );
         });
