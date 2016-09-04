@@ -16,7 +16,7 @@ module.exports = function() {
         ],
         assets: [
             client + "/app/**/*.html",
-            client + "/app/data/*.json",
+            client + "/app/data/**/*.json",
             client + "/bower_components/font-awesome/css/*",
             client + "/bower_components/font-awesome/fonts/*",
             client + "/bower_components/weather-icons/css/*",

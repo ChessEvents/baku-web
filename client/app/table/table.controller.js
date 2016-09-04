@@ -22,14 +22,19 @@
         $scope.currentPage = 1;
         $scope.currentPage = [];
 
+
+
         $http.get('app/data/teams.json').then( function( data ) {
 
             data.data.forEach( function( item ) {
 
+
+
               if( typeof item.score !== 'undefined' ) {
                   $scope.teams.push({
+                    id: item._id,
                     name: item.teamName,
-                    country: null,
+                    country: item.country,
                     roundOne: item.score[0].r1,
                     roundTwo: item.score[0].r2,
                     roundThree: item.score[0].r3,
@@ -46,7 +51,7 @@
                 } else {
                   $scope.teams.push({
                     name: item.teamName + " *",
-                    country: null,
+                    country: item.country,
                     roundOne: 0,
                     roundTwo: 0,
                     roundThree: 0,

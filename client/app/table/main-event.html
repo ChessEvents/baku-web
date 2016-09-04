@@ -5,11 +5,9 @@
             <h2 class="section-header">Teams</h2>
         </div>
         <div class="col-md-12">
-            <section class="panel panel-default">
-                <div class="panel-body" data-ng-controller="AlertDemoCtrl">
-                    <uib-alert type="info">Detailed team scores coming soon! Thank you for your patience. <i class="zmdi zmdi-favorite color-warning"></i></uib-alert>
-                </div>
-            </section>
+            <div class="callout callout-info">
+                <span>You can now view your individual player scores, simply click on your team name!</span>
+            </div>
             <section class="panel panel-default table-dynamic">
                 <div class="table-filters">
                     <div class="row">
@@ -31,9 +29,23 @@
                         <tr>
                             <th>
                                 <div class="th">
+                                    #
+                                    <span class="fa fa-angle-up" data-ng-click=" order('rank') " data-ng-class="{active: row == 'rank'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-rank') " data-ng-class="{active: row == '-rank'}"></span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
                                     Teams
                                     <span class="fa fa-angle-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
                                     <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
+                                    Country
+                                    <span class="fa fa-angle-up" data-ng-click=" order('country') " data-ng-class="{active: row == 'country'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-country') " data-ng-class="{active: row == '-country'}"></span>
                                 </div>
                             </th>
                             <th>
@@ -52,6 +64,13 @@
                             </th>
                             <th>
                                 <div class="th">
+                                    R3
+                                    <span class="fa fa-angle-up" data-ng-click=" order('roundThree') " data-ng-class="{active: row == 'roundThree'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-roundThree') " data-ng-class="{active: row == '-roundThree'}"></span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="th">
                                     Total Score
                                     <span class="fa fa-angle-up" data-ng-click=" order('total') " data-ng-class="{active: row == 'total'}"></span>
                                     <span class="fa fa-angle-down" data-ng-click=" order('-total') " data-ng-class="{active: row == '-total'}"></span>
@@ -61,9 +80,12 @@
                     </thead>
                     <tbody>
                         <tr data-ng-repeat="team in currentPageTeams">
-                            <td>{{team.name }}</td>
+                            <td>{{ $index }}</td>
+                            <td><a ng-href="#/team/{{ team.id }}">{{ team.name }}</a></td>
+                            <td>{{  team.country }}</td>
                             <td>{{ team.roundOne }}</td>
                             <td>{{ team.roundTwo }}</td>
+                            <td>{{ team.roundThree }}</td>
                             <td>{{ team.total }}</td>
                         </tr>
                     </tbody>
