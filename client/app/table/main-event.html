@@ -27,39 +27,39 @@
                             <th>
                                 <div class="th">
                                     Teams
-                                    <span class="fa fa-angle-up" data-ng-click=" order('teamName') " data-ng-class="{active: row == 'teamName'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-teamName') " data-ng-class="{active: row == '-teamName'}"></span>
+                                    <span class="fa fa-angle-up" data-ng-click=" order('tname') " data-ng-class="{active: row == 'name'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
                                 </div>
                             </th>
                             <th>
                                 <div class="th">
                                     R1
-                                    <!-- <span class="fa fa-angle-up" data-ng-click=" order('score[0].r1') " data-ng-class="{active: row == 'score[0].r1'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-score') " data-ng-class="{active: row == '-score[0].r1'}"></span> -->
+                                    <span class="fa fa-angle-up" data-ng-click=" order('roundOne') " data-ng-class="{active: row == 'roundOne'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-roundOne') " data-ng-class="{active: row == '-roundOne'}"></span>
                                 </div>
                             </th>
                             <th>
                                 <div class="th">
                                     R2
-                                    <!-- <span class="fa fa-angle-up" data-ng-click=" order('score[0].r2') " data-ng-class="{active: row == 'score[0].r2'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-score') " data-ng-class="{active: row == '-score[0].r2'}"></span> -->
+                                    <span class="fa fa-angle-up" data-ng-click=" order('roundTwo') " data-ng-class="{active: row == 'roundTwo'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-roundTwo') " data-ng-class="{active: row == '-roundTwo'}"></span>
                                 </div>
                             </th>
                             <th>
                                 <div class="th">
                                     Total Score
-                                    <!-- <span class="fa fa-angle-up" data-ng-click=" order('score[0].total') " data-ng-class="{active: row == 'score[0].total'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-total') " data-ng-class="{active: row == '-score[0].total'}"></span> -->
+                                    <span class="fa fa-angle-up" data-ng-click=" order('total') " data-ng-class="{active: row == 'total'}"></span>
+                                    <span class="fa fa-angle-down" data-ng-click=" order('-total') " data-ng-class="{active: row == '-total'}"></span>
                                 </div>
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr data-ng-repeat="team in currentPageTeams">
-                            <td>{{team.teamName}}</td>
-                            <td>{{ parseInt(team.score[0].r1) }}</td>
-                            <td>{{ parseInt(team.score[0].r2) }}</td>
-                            <td>{{ parseInt(team.score[0].total)}}</td>
+                            <td>{{team.name }}</td>
+                            <td>{{ team.roundOne }}</td>
+                            <td>{{ team.roundTwo }}</td>
+                            <td>{{ team.total }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -82,6 +82,17 @@
                     </div>
                 </footer>
             </section>
+
+            <div class="row ui-section">
+                <div class="col-md-12">
+                    <section class="panel panel-default">
+                        <div class="panel-body" data-ng-controller="AlertDemoCtrl">
+                            <uib-alert type="warning">* Sorry, these team selections have thrown a couple of little errors in our app, we're working hard to correct them for you. We expect these to be fixed soon! <i class="zmdi zmdi-favorite color-danger"></i></uib-alert>                        
+                        </div>
+                    </section>
+                </div>
+            </div>
+
         </div>
     </div>
 

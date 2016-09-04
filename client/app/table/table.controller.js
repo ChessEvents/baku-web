@@ -17,17 +17,54 @@
         $scope.onOrderChange = onOrderChange;
         $scope.search = search;
         $scope.order = order;
-        $scope.numPerPageOpt = [ 3, 5, 10, 20 ];
-        $scope.numPerPage = $scope.numPerPageOpt[ 2 ];
+        $scope.numPerPageOpt = [ 3, 5, 10, 20, 100 ];
+        $scope.numPerPage = $scope.numPerPageOpt[ 3 ];
         $scope.currentPage = 1;
         $scope.currentPage = [];
-        $scope.parseInt = function( num ) {
-            return parseInt( num, 10)  || 0;
-        }
 
         $http.get('app/data/teams.json').then( function( data ) {
-            $scope.teams = data.data;
-            $scope.order( '' );
+
+            data.data.forEach( item => {
+
+              if( typeof item.score !== 'undefined' ) {
+                  $scope.teams.push({
+                    name: item.teamName,
+                    country: null,
+                    roundOne: item.score[0].r1,
+                    roundTwo: item.score[0].r2,
+                    roundThree: item.score[0].r3,
+                    roundFour: item.score[0].r4,
+                    roundFive: item.score[0].r5,
+                    roundSix: item.score[0].r6,
+                    roundSeven: item.score[0].r7,
+                    roundEight: item.score[0].r8,
+                    roundNine: item.score[0].r9,
+                    roundTen: item.score[0].r10,
+                    roundEleven: item.score[0].r11,
+                    total: item.score[0].total
+                  });
+                } else {
+                  $scope.teams.push({
+                    name: item.teamName + " *",
+                    country: null,
+                    roundOne: 0,
+                    roundTwo: 0,
+                    roundThree: 0,
+                    roundFour: 0,
+                    roundFive: 0,
+                    roundSix: 0,
+                    roundSeven: 0,
+                    roundEight: 0,
+                    roundNine: 0,
+                    roundTen: 0,
+                    roundEleven: 0,
+                    total: 0
+                  });
+                }
+            });
+
+            $scope.order( '-total' );
+
         }, function ( error ) {
             console.log( error );
         });
@@ -61,7 +98,6 @@
         };
 
         function order( rowName ) {
-
 
             if ( $scope.row === rowName ) {
                 return;
