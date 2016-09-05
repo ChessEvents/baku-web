@@ -24,72 +24,74 @@
                     </div>
                 </div>
 
-                <table class="table table-bordered table-striped table-responsive">
-                    <thead>
-                        <tr>
-                            <!-- <th>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <!-- <th>
                                 <div class="th">
                                     #
                                     <span class="fa fa-angle-up" data-ng-click=" order('rank') " data-ng-class="{active: row == 'rank'}"></span>
                                     <span class="fa fa-angle-down" data-ng-click=" order('-rank') " data-ng-class="{active: row == '-rank'}"></span>
                                 </div>
                             </th> -->
-                            <th>
-                                <div class="th">
-                                    Teams
-                                    <span class="fa fa-angle-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="th">
-                                    Country
-                                    <span class="fa fa-angle-up" data-ng-click=" order('country') " data-ng-class="{active: row == 'country'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-country') " data-ng-class="{active: row == '-country'}"></span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="th">
-                                    R1
-                                    <span class="fa fa-angle-up" data-ng-click=" order('roundOne') " data-ng-class="{active: row == 'roundOne'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-roundOne') " data-ng-class="{active: row == '-roundOne'}"></span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="th">
-                                    R2
-                                    <span class="fa fa-angle-up" data-ng-click=" order('roundTwo') " data-ng-class="{active: row == 'roundTwo'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-roundTwo') " data-ng-class="{active: row == '-roundTwo'}"></span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="th">
-                                    R3
-                                    <span class="fa fa-angle-up" data-ng-click=" order('roundThree') " data-ng-class="{active: row == 'roundThree'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-roundThree') " data-ng-class="{active: row == '-roundThree'}"></span>
-                                </div>
-                            </th>
-                            <th>
-                                <div class="th">
-                                    Total Score
-                                    <span class="fa fa-angle-up" data-ng-click=" order('total') " data-ng-class="{active: row == 'total'}"></span>
-                                    <span class="fa fa-angle-down" data-ng-click=" order('-total') " data-ng-class="{active: row == '-total'}"></span>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr data-ng-repeat="team in currentPageTeams">
-                            <!-- <td>{{ $index }}</td> -->
-                            <td><a ng-href="#/team/{{ team.id }}">{{ team.name }}</a></td>
-                            <td>{{  team.country }}</td>
-                            <td>{{ team.roundOne }}</td>
-                            <td>{{ team.roundTwo }}</td>
-                            <td>{{ team.roundThree }}</td>
-                            <td>{{ team.total }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <th>
+                                    <div class="th">
+                                        Teams
+                                        <span class="fa fa-angle-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="th">
+                                        Country
+                                        <span class="fa fa-angle-up" data-ng-click=" order('country') " data-ng-class="{active: row == 'country'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-country') " data-ng-class="{active: row == '-country'}"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="th">
+                                        R1
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundOne') " data-ng-class="{active: row == 'roundOne'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundOne') " data-ng-class="{active: row == '-roundOne'}"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="th">
+                                        R2
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundTwo') " data-ng-class="{active: row == 'roundTwo'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundTwo') " data-ng-class="{active: row == '-roundTwo'}"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="th">
+                                        R3
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundThree') " data-ng-class="{active: row == 'roundThree'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundThree') " data-ng-class="{active: row == '-roundThree'}"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="th">
+                                        Total Score
+                                        <span class="fa fa-angle-up" data-ng-click=" order('total') " data-ng-class="{active: row == 'total'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-total') " data-ng-class="{active: row == '-total'}"></span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="team in currentPageTeams">
+                                <!-- <td>{{ $index }}</td> -->
+                                <td><a ng-href="#/team/{{ team.id }}">{{ team.name }}</a></td>
+                                <td>{{ team.country }}</td>
+                                <td>{{ team.roundOne }}</td>
+                                <td>{{ team.roundTwo }}</td>
+                                <td>{{ team.roundThree }}</td>
+                                <td>{{ team.total }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <footer class="table-footer">
                     <div class="row">
