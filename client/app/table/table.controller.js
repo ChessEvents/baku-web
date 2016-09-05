@@ -28,8 +28,6 @@
 
             data.data.forEach( function( item ) {
 
-
-
               if( typeof item.score !== 'undefined' ) {
                   $scope.teams.push({
                     id: item._id,

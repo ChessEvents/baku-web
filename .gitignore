@@ -3,6 +3,7 @@ dist
 .tmp
 .sass-cache
 client/bower_components
+client/app/data/round-*/*
 landing/bower_components
 landing/css/main.css
 landing/jade

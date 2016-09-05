@@ -27,13 +27,13 @@
                 <table class="table table-bordered table-striped table-responsive">
                     <thead>
                         <tr>
-                            <th>
+                            <!-- <th>
                                 <div class="th">
                                     #
                                     <span class="fa fa-angle-up" data-ng-click=" order('rank') " data-ng-class="{active: row == 'rank'}"></span>
                                     <span class="fa fa-angle-down" data-ng-click=" order('-rank') " data-ng-class="{active: row == '-rank'}"></span>
                                 </div>
-                            </th>
+                            </th> -->
                             <th>
                                 <div class="th">
                                     Teams
@@ -80,7 +80,7 @@
                     </thead>
                     <tbody>
                         <tr data-ng-repeat="team in currentPageTeams">
-                            <td>{{ $index }}</td>
+                            <!-- <td>{{ $index }}</td> -->
                             <td><a ng-href="#/team/{{ team.id }}">{{ team.name }}</a></td>
                             <td>{{  team.country }}</td>
                             <td>{{ team.roundOne }}</td>
