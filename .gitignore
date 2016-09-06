@@ -4,7 +4,7 @@ dist.zip
 .tmp
 .sass-cache
 client/bower_components
-client/app/data/round-*/*
+client/app/data/details/*
 landing/bower_components
 landing/css/main.css
 landing/jade

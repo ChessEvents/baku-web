@@ -1,18 +1,20 @@
-
-<div class="nav-wrapper">
-    <ul id="nav"
-        class="nav"
-        data-slim-scroll
-        data-collapse-nav
-        data-highlight-active>
+<div class="nav-wrapper" data-ng-controller="sideBarCtrl">
+    <ul id="nav" class="nav" data-slim-scroll data-collapse-nav data-highlight-active>
         <li class="nav-title"> <span data-translate="NAVIGATION"></span> </li>
-        <!-- <li><a md-button aria-label="meanu" href="#/dashboard"><i class="zmdi zmdi-home"></i><span data-translate="DASHBOARD"></span> </a></li> -->
+        <li><a md-button aria-label="meanu" href="#/dashboard"><i class="zmdi zmdi-home"></i>Stats </a></li>
         <li>
             <a md-button aria-label="meanu" href="#/table"><i class="zmdi zmdi-view-list"></i><span data-translate="TABLES"></span></a>
             <ul>
-                <li><a md-button aria-label="meanu" href="#/table/main-event"><i class="fa fa-circle"></i>Main Event</a></li>
+                <li><a md-button aria-label="meanu" href="#/table/main-event"><i class="fa fa-circle"></i>FCO 2016</a></li>
             </ul>
         </li>
+
         <li class="nav-divider"></li>
+        <li class="nav-title" data-ng-show="setFavourites">Favourites</li>
+        <li class="li-small" data-ng-show="setFavourites" data-ng-repeat="favourite in favourites">
+            <a href="#/team/{{ favourite[0].id }}"><i class="fa fa-circle {{ favourite[0].color }}"></i>
+                <span>{{ favourite[0].team }}</span>
+            </a>
+        </li>
     </ul>
 </div>

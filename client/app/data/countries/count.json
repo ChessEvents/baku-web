@@ -1,0 +1,625 @@
+[
+  {
+    "_id": {
+      "country": "United States"
+    },
+    "iso": "US",
+    "countryCount": 166
+  },
+  {
+    "_id": {
+      "country": "Germany"
+    },
+    "iso": "DE",
+    "countryCount": 136
+  },
+  {
+    "_id": {
+      "country": "United Kingdom"
+    },
+    "iso": "GB",
+    "countryCount": 112
+  },
+  {
+    "_id": {
+      "country": "Turkey"
+    },
+    "iso": "TR",
+    "countryCount": 86
+  },
+  {
+    "_id": {
+      "country": "Spain"
+    },
+    "iso": "ES",
+    "countryCount": 80
+  },
+  {
+    "_id": {
+      "country": "India"
+    },
+    "iso": "IN",
+    "countryCount": 52
+  },
+  {
+    "_id": {
+      "country": "CHESS.COM"
+    },
+    "iso": null,
+    "countryCount": 50
+  },
+  {
+    "_id": {
+      "country": "Norway"
+    },
+    "iso": "NO",
+    "countryCount": 44
+  },
+  {
+    "_id": {
+      "country": "Italy"
+    },
+    "iso": "IT",
+    "countryCount": 34
+  },
+  {
+    "_id": {
+      "country": "Netherlands"
+    },
+    "iso": "NL",
+    "countryCount": 34
+  },
+  {
+    "_id": {
+      "country": "Canada"
+    },
+    "iso": "CA",
+    "countryCount": 32
+  },
+  {
+    "_id": {
+      "country": "Australia"
+    },
+    "iso": "AU",
+    "countryCount": 28
+  },
+  {
+    "_id": {
+      "country": "Sweden"
+    },
+    "iso": "SE",
+    "countryCount": 26
+  },
+  {
+    "_id": {
+      "country": "Portugal"
+    },
+    "iso": "PT",
+    "countryCount": 26
+  },
+  {
+    "_id": {
+      "country": "France"
+    },
+    "iso": "FR",
+    "countryCount": 23
+  },
+  {
+    "_id": {
+      "country": "Ireland"
+    },
+    "iso": "IE",
+    "countryCount": 21
+  },
+  {
+    "_id": {
+      "country": "Poland"
+    },
+    "iso": "PL",
+    "countryCount": 21
+  },
+  {
+    "_id": {
+      "country": "Austria"
+    },
+    "iso": "AT",
+    "countryCount": 20
+  },
+  {
+    "_id": {
+      "country": "Russia"
+    },
+    "iso": "RU",
+    "countryCount": 20
+  },
+  {
+    "_id": {
+      "country": "Brazil"
+    },
+    "iso": "BR",
+    "countryCount": 18
+  },
+  {
+    "_id": {
+      "country": "Malaysia"
+    },
+    "iso": "MY",
+    "countryCount": 17
+  },
+  {
+    "_id": {
+      "country": "Serbia and Montenegro"
+    },
+    "iso": "ME",
+    "countryCount": 17
+  },
+  {
+    "_id": {
+      "country": "Argentina"
+    },
+    "iso": "AR",
+    "countryCount": 17
+  },
+  {
+    "_id": {
+      "country": "Romania"
+    },
+    "iso": "RO",
+    "countryCount": 16
+  },
+  {
+    "_id": {
+      "country": "Greece"
+    },
+    "iso": "GR",
+    "countryCount": 16
+  },
+  {
+    "_id": {
+      "country": "Hungary"
+    },
+    "iso": "HU",
+    "countryCount": 15
+  },
+  {
+    "_id": {
+      "country": "Sri Lanka"
+    },
+    "iso": "LK",
+    "countryCount": 15
+  },
+  {
+    "_id": {
+      "country": "Belgium"
+    },
+    "iso": "BE",
+    "countryCount": 14
+  },
+  {
+    "_id": {
+      "country": "Iceland"
+    },
+    "iso": "IS",
+    "countryCount": 13
+  },
+  {
+    "_id": {
+      "country": "Croatia"
+    },
+    "iso": "HR",
+    "countryCount": 13
+  },
+  {
+    "_id": {
+      "country": "Slovenia"
+    },
+    "iso": "SI",
+    "countryCount": 11
+  },
+  {
+    "_id": {
+      "country": "Switzerland"
+    },
+    "iso": "CH",
+    "countryCount": 10
+  },
+  {
+    "_id": {
+      "country": "Mexico"
+    },
+    "iso": "MX",
+    "countryCount": 10
+  },
+  {
+    "_id": {
+      "country": "Philippines"
+    },
+    "iso": "PH",
+    "countryCount": 10
+  },
+  {
+    "_id": {
+      "country": "Finland"
+    },
+    "iso": "FI",
+    "countryCount": 10
+  },
+  {
+    "_id": {
+      "country": "Nigeria"
+    },
+    "iso": "NG",
+    "countryCount": 8
+  },
+  {
+    "_id": {
+      "country": "Czech Republic"
+    },
+    "iso": "CZ",
+    "countryCount": 7
+  },
+  {
+    "_id": {
+      "country": "Puerto Rico"
+    },
+    "iso": "PR",
+    "countryCount": 6
+  },
+  {
+    "_id": {
+      "country": "Slovakia"
+    },
+    "iso": "SK",
+    "countryCount": 6
+  },
+  {
+    "_id": {
+      "country": "Denmark"
+    },
+    "iso": "DK",
+    "countryCount": 6
+  },
+  {
+    "_id": {
+      "country": "Egypt"
+    },
+    "iso": "EG",
+    "countryCount": 5
+  },
+  {
+    "_id": {
+      "country": "Ukraine"
+    },
+    "iso": "UA",
+    "countryCount": 5
+  },
+  {
+    "_id": {
+      "country": "Namibia"
+    },
+    "iso": "NA",
+    "countryCount": 5
+  },
+  {
+    "_id": {
+      "country": "Israel"
+    },
+    "iso": "IL",
+    "countryCount": 5
+  },
+  {
+    "_id": {
+      "country": "South Africa"
+    },
+    "iso": "ZA",
+    "countryCount": 5
+  },
+  {
+    "_id": {
+      "country": "Azerbaijan"
+    },
+    "iso": "AZ",
+    "countryCount": 4
+  },
+  {
+    "_id": {
+      "country": "Venezuela"
+    },
+    "iso": "VE",
+    "countryCount": 4
+  },
+  {
+    "_id": {
+      "country": "Bosnia and Herzegovina"
+    },
+    "iso": "BA",
+    "countryCount": 4
+  },
+  {
+    "_id": {
+      "country": "New Zealand"
+    },
+    "iso": "NZ",
+    "countryCount": 4
+  },
+  {
+    "_id": {
+      "country": "Costa Rica"
+    },
+    "iso": "CR",
+    "countryCount": 3
+  },
+  {
+    "_id": {
+      "country": "Palau"
+    },
+    "iso": "PW",
+    "countryCount": 3
+  },
+  {
+    "_id": {
+      "country": "Vietnam"
+    },
+    "iso": "VN",
+    "countryCount": 3
+  },
+  {
+    "_id": {
+      "country": "Singapore"
+    },
+    "iso": "SG",
+    "countryCount": 3
+  },
+  {
+    "_id": {
+      "country": "Luxembourg"
+    },
+    "iso": "LU",
+    "countryCount": 3
+  },
+  {
+    "_id": {
+      "country": "Bulgaria"
+    },
+    "iso": "BG",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Georgia"
+    },
+    "iso": "GE",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Bermuda"
+    },
+    "iso": "BM",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Bangladesh"
+    },
+    "iso": "BD",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Macedonia"
+    },
+    "iso": "MK",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "China"
+    },
+    "iso": "CN",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Estonia"
+    },
+    "iso": "EE",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Jamaica"
+    },
+    "iso": "JM",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Moldova"
+    },
+    "iso": "MD",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Colombia"
+    },
+    "iso": "CO",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Albania"
+    },
+    "iso": "AL",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Indonesia"
+    },
+    "iso": "ID",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Pakistan"
+    },
+    "iso": "PK",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Burkina Faso"
+    },
+    "iso": "BF",
+    "countryCount": 2
+  },
+  {
+    "_id": {
+      "country": "Peru"
+    },
+    "iso": "PE",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Lebanon"
+    },
+    "iso": "LB",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Guatemala"
+    },
+    "iso": "GT",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Kenya"
+    },
+    "iso": "KE",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Qatar"
+    },
+    "iso": "QA",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Malta"
+    },
+    "iso": "MT",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Seychelles"
+    },
+    "iso": "SC",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Afghanistan"
+    },
+    "iso": "AF",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Montenegro"
+    },
+    "iso": "ME",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Iran"
+    },
+    "iso": "IR",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Lithuania"
+    },
+    "iso": "LT",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Andorra"
+    },
+    "iso": "AD",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Cameroon"
+    },
+    "iso": "CM",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Chile"
+    },
+    "iso": "CL",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Uruguay"
+    },
+    "iso": "UY",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Maldives"
+    },
+    "iso": "MV",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Cuba"
+    },
+    "iso": "CU",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "South Korea"
+    },
+    "iso": "KR",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Hong Kong"
+    },
+    "iso": "HK",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Uzbekistan"
+    },
+    "iso": "UZ",
+    "countryCount": 1
+  },
+  {
+    "_id": {
+      "country": "Thailand"
+    },
+    "iso": "TH",
+    "countryCount": 1
+  }
+]
