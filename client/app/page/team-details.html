@@ -1,27 +1,32 @@
-<div class="page page-invoice" data-ng-controller="teamDetailsCtrl">
+<div class="page page-profile" data-ng-controller="teamDetailsCtrl">
 
-    <div class="invoice-wrapper">
-        <section class="invoice-container" id="invoice">
+    <header class="profile-header" style="background: url('images/background/{{ random }}.jpg') no-repeat center center fixed;">
+        <div class="profile-img">
+            <img alt="" ng-src="{{ iso }}" class="img-circle">
+        </div>
+        <div class="profile-social">
+            <p><span class="ui-highlight">{{ teamName }}<span></p>
+        </div>
+        <div class="profile-info">
+            <ul class="list-unstyled list-inline">
+                <li><span class="ui-highlight colored"><i class="fa fa-trophy success"></i> Overall <span class="">place coming soon!</span></span>
+                </li>
+                <li><span class="ui-highlight colored"><i class="fa fa-list-ul warning"></i> {{ country }} <span class="">league place coming soon!</span></span>
+                </li>
+                </ul>
+        </div>
+    </header>
 
-            <div class="invoice-inner">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <p class="size-h1">{{ teamName | uppercase }}</p>
-                    </div>
-                    <div class="col-xs-6 text-right">
-                        {{ country }}
-                        <img ng-src="{{ iso }}" width="{{ width }}" height="{{ height }}"/>
-                    </div>
-                </div>
-
-                <hr>
-                <div class="divider divider-lg"></div>
+    <div class="divider divider-lg"></div>
+    <div class="row ui-section">
+        <div class="col-md-12">
+            <div class="panel panel-default">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr class="bg-dark">
                                 <th>Name</th>
-                                <th>Title</th>
+                                <th class="text-center">Title</th>
                                 <th class="text-center">Rating</th>
                                 <th class="text-center">Team</th>
                                 <th class="text-center">Round 1</th>
@@ -29,6 +34,7 @@
                                 <th class="text-center">Round 3</th>
                                 <th class="text-center">Round 4</th>
                                 <th class="text-center">Round 5</th>
+                                <th class="text-center">Round 6</th>
                                 <th class="text-center">Total</th>
                             </tr>
                         </thead>
@@ -36,8 +42,8 @@
                             <tr ng-repeat="player in players">
                                 <td>
                                     <a ng-href="{{ player.url }}" target="_blank">
-                                        {{ player.name }}
-                                    </a>
+                                         {{ player.name }}
+                                     </a>
                                 </td>
                                 <td class="text-center">{{ player.title }}</td>
                                 <td class="text-center">{{ player.rating }}</td>
@@ -47,10 +53,13 @@
                                 <td class="text-center">{{ player.r3 || 0 }}</td>
                                 <td class="text-center">{{ player.r4 || 0 }}</td>
                                 <td class="text-center">{{ player.r5 || 0 }}</td>
-                                <td class="text-center">
-                                    {{ player.r1 + player.r2 + player.r3 + player.r4 + player.r5 }}
+                                <td class="text-center">{{ player.r6 || 0 }}</td>
+                                <td class="text-center warning">
+                                    {{ player.r1 + player.r2 + player.r3 + player.r4 + player.r5 + player.r6 }}
                                 </td>
                             </tr>
+                        </tbody>
+                        <tfoot>
                             <tr>
                                 <td class="warning" colspan="4"></td>
                                 <td class="success text-center">{{ score.r1 }} </td>
@@ -58,12 +67,21 @@
                                 <td class="success text-center">{{ score.r3 }} </td>
                                 <td class="success text-center">{{ score.r4 }} </td>
                                 <td class="success text-center">{{ score.r5 }} </td>
+                                <td class="success text-center">{{ score.r6 }} </td>
                                 <td class="success text-center"><strong>{{ score.total }}</strong></td>
                             </tr>
-                        </tbody>
+                        </tfoot>
                     </table>
                 </div>
+
+
+
             </div>
-        </section>
+        </div>
     </div>
+
+    <p>
+        All photos used from the <a href="http://www1.bakuchessolympiad.com/content/7">official website</a> &copy; Eteri Kublashvili, Paul Truong
+    </p>
+
 </div>

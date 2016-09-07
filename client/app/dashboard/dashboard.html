@@ -1,34 +1,36 @@
 <div class="page page-dashboard" data-ng-controller="DashboardCtrl">
     <div class="row">
         <!-- Stats -->
-        <div class="col-lg-6 col-md-6 pull-lg-6">
+        <div class="col-lg-4 col-md-4 pull-lg-4">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table no-margin">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Country</th>
-                                <th>Flag</th>
-                                <th>Teams</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-ng-repeat="country in countries">
-                                <td>{{ $index + 1 }}</td>
-                                <td>{{ country.name }}</td>
-                                <td>
-                                    <span data-ng-hide="country.setImage" class="flag-icon flag-icon-{{ country.iso }}"></span>
-                                    <img data-ng-show="country.setImage" data-ng-src="{{ country.imageUrl }}" alt="country.imageName" />
-                                </td>
-                                <td>{{ country.count }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped no-margin">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Country</th>
+                                    <th>Flag</th>
+                                    <th>Teams</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="country in countries">
+                                    <td>{{ $index + 1 }}</td>
+                                    <td><a ng-href="#/table/main-event/{{country.name}}">{{ country.name }}</a></td>
+                                    <td>
+                                        <span data-ng-hide="country.setImage" class="flag-icon flag-icon-{{ country.iso }}"></span>
+                                        <img data-ng-show="country.setImage" data-ng-src="{{ country.imageUrl }}" alt="country.imageName" />
+                                    </td>
+                                    <td>{{ country.count }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-xsm-6">
+        <div class="col-lg-4 col-md-4 col-xsm-6">
             <div class="panel panel-box">
                 <div class="panel-top">
                     <span class="zmdi zmdi-account-add color-success"></span>
@@ -41,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-xsm-6">
+        <div class="col-lg-4 col-md-4 col-xsm-6">
             <div class="panel panel-box">
                 <div class="panel-top">
                     <i class="zmdi zmdi-pin-drop color-info"></i>
@@ -54,8 +56,99 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-8 col-md-8 pull-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="text-center">Top 10 Open Players</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped no-margin">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th class="text-center">Total</th>
+                                    <th class="text-center">Results</th>
+                                    <th>Country</th>
+                                    <th class="text-center">Rating</th>
+                                    <th class="text-center">Board</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="player in topOpen">
+                                    <td class="text-center">{{ $index + 1 }}</td>
+                                    <td><a ng-href="http://chess-results.com/tnr232875.aspx?lan=1&art=9&flag=30&wi=821&snr={{ player.rank}}" target="_blank">{{ player.name }}</a></td>
+                                    <td class="success text-center"><strong>{{ player.total }}</strong></td>
+                                    <td ng-bind-html="player.roundResults | calculateScore"></td>
+                                    <td>{{ player.country }}</td>
+                                    <td class="text-center">{{ player.rating }}</td>
+                                    <td class="text-center">{{ player.board }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        <ul>
+                            <li>
+                                <span class='text-danger'>W</span> = White Win
+                            </li>
+                            <li>
+                                W = Black Win
+                            </li>
+                            <li>
+                                <span class='text-primary'>D</span> = Draw
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-
+        <div class="col-lg-8 col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="text-center">Top 10 Women Players</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped no-margin">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th class="text-center">Total</th>
+                                    <th class="text-center">Results</th>
+                                    <th>Country</th>
+                                    <th>Rating</th>
+                                    <th>Board</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="player in topWomen">
+                                    <td class="text-center">{{ $index + 1 }}</td>
+                                    <td><a ng-href="http://chess-results.com/tnr232876.aspx?lan=1&art=9&flag=30&wi=821&snr={{ player.rank}}" target="_blank">{{ player.name }}</a></td>
+                                    <td class="success text-center"><strong>{{ player.total }}</strong></td>
+                                    <td ng-bind-html="player.roundResults | calculateScore"></td>
+                                    <td>{{ player.country }}</td>
+                                    <td class="text-center">{{ player.rating }}</td>
+                                    <td class="text-center">{{ player.board }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        <ul>
+                            <li>
+                                <span class='text-danger'>W</span> = White Win
+                            </li>
+                            <li>
+                                W = Black Win
+                            </li>
+                            <li>
+                                <span class='text-primary'>D</span> = Draw
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
         <!-- end stats -->
     </div>
 

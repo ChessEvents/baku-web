@@ -2,11 +2,52 @@
     'use strict';
 
     angular.module( 'app' )
-        .controller( 'DashboardCtrl', [ '$scope', '$http', DashboardCtrl ] )
+        .controller( 'DashboardCtrl', [ '$scope', '$http', '$sce', DashboardCtrl ] )
+        .filter( 'calculateScore', [ calculateScore ] );
 
-    function DashboardCtrl( $scope, $http ) {
+
+     function calculateScore() {
+
+        return function ( input ) {
+
+            var score = "";
+
+            input.forEach( function( result ) {
+                for ( var i = 1; i <= 11; i++ ) {
+
+                    if ( result.round === i ) {
+                        if ( result.result === "1" ) {
+                            if( result.colour === "b" ) {
+                                score += " W ";
+                            } else {
+                                score += " <span class='text-danger'>W</span> ";
+                            }
+                        }
+                        if ( result.result === "0" ) {
+                            score += " L ";
+                        }
+                        if ( result.result === "½" ) {
+                            score += " <span class='text-primary'>D</span> ";
+                        }
+                    }
+                }
+            });
+
+            return score;
+        }
+    }
+
+    function DashboardCtrl( $scope, $http, $sce ) {
 
         $scope.countries = [];
+
+        $http.get( 'app/data/top-players/open.json' ).then( function ( players ) {
+            $scope.topOpen = players.data;
+        } );
+
+        $http.get( 'app/data/top-players/women.json' ).then( function ( players ) {
+            $scope.topWomen = players.data;
+        } );
 
         $http.get( 'app/data/countries/count.json' )
             .success( function ( countries ) {

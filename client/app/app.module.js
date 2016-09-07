@@ -4,15 +4,12 @@
     angular.module('app', [
         // Core modules
          'app.core'
-        
+
         // Custom Feature modules
-        ,'app.chart'
-        ,'app.ui'
-        ,'app.ui.form'
-        ,'app.ui.form.validation'
         ,'app.page'
-        ,'app.table'
-        
+        ,'app.main-event'
+        ,'app.week-two-sprint'
+
         // 3rd party feature modules
         ,'mgo-angular-wizard'
         ,'ui.tree'
@@ -21,4 +18,3 @@
     ]);
 
 })();
-

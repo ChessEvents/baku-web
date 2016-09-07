@@ -5,26 +5,6 @@
         .config( [ '$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider, $http ) {
             var routes, setRoutes;
 
-            routes = [
-                'table/main-event', 'table/week-two-sprint'
-            ]
-
-            setRoutes = function ( route ) {
-                var config, url;
-                url = '/' + route;
-                config = {
-                    url: url,
-                    templateUrl: 'app/' + route + '.html'
-                };
-
-                $stateProvider.state( route, config );
-                return $stateProvider;
-            };
-
-            routes.forEach( function ( route ) {
-                return setRoutes( route );
-            } );
-
             $stateProvider.state( 'team', {
                 url: '/team/:id',
                 templateUrl: 'app/page/team-details.html'
@@ -35,9 +15,24 @@
                 templateUrl: 'app/dashboard/dashboard.html'
             } );
 
+            $stateProvider.state( 'main-event', {
+                url: '/table/main-event',
+                templateUrl: 'app/table/main-event.html'
+            });
+
+            $stateProvider.state( 'week-two-sprint', {
+                url: '/table/week-two-sprint',
+                templateUrl: 'app/table/week-two-sprint.html'
+            });
+
+            $stateProvider.state( 'country', {
+                url: '/table/main-event/:country',
+                templateUrl: 'app/table/main-event.html'
+            } );
+
             $urlRouterProvider
-                .when( '/', '/table/main-event' )
-                .otherwise( '/table/main-event' );
+                .when( '/', '/dashboard' )
+                .otherwise( '/dashboard' );
 
         } ] );
 
