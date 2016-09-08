@@ -29,7 +29,7 @@
                     $rootScope.$broadcast('nav:reset');
                 }
                 return e.preventDefault();
-            });            
+            });
         }
     }
 
@@ -65,6 +65,7 @@
             $nav = $('#nav-container');
 
             $a.on('click', function(event) {
+                console.log( 'CLICKED ');
                 var $parent, $this;
                 if ($app.hasClass('nav-collapsed-min') || ($nav.hasClass('nav-horizontal') && $window.width() >= 768)) {
                     return false;
@@ -105,7 +106,7 @@
                 clearTimeout(t);
                 t = setTimeout(updateClass, 300);
             });
-          
+
         }
     }
 
@@ -168,12 +169,9 @@
         function link(scope, ele, attrs) {
             ele.on('click', function() {
                 return $('#app').toggleClass('on-canvas');
-            });         
+            });
         }
     }
 
 
-})(); 
-
-
-
+})();

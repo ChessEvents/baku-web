@@ -6,7 +6,7 @@
             '$cookies', '$rootScope', '$window', '$stateParams', TableCtrl
         ] );
 
-    function TableCtrl( $scope, $filter, $http, $mdToast, $cookies, $rootScope, $window , $stateParams ) {
+    function TableCtrl( $scope, $filter, $http, $mdToast, $cookies, $rootScope, $window, $stateParams ) {
         var init;
 
         $window.mobilecheck = function () {
@@ -115,7 +115,7 @@
         var url = "app/data/teams.json";
         $scope.title = "Main League";
 
-        if( $stateParams.country ) {
+        if ( $stateParams.country ) {
             url = "app/data/teams-by-country/" + $stateParams.country + ".json";
             $scope.title = $stateParams.country + " League";
         }
@@ -158,28 +158,31 @@
                     teamName = item.teamName.substring( 0, 20 ) + ' ...';
                 }
 
-                $scope.teams.push( {
-                    id: item._id,
-                    name: teamName,
-                    country: item.country,
-                    setImage: setImage,
-                    imageUrl: imageUrl,
-                    imageName: imageName,
-                    iso: iso,
-                    roundOne: item.score[ 0 ].r1,
-                    roundTwo: item.score[ 0 ].r2,
-                    roundThree: item.score[ 0 ].r3,
-                    roundFour: item.score[ 0 ].r4,
-                    roundFive: item.score[ 0 ].r5,
-                    roundSix: item.score[ 0 ].r6,
-                    roundSeven: item.score[ 0 ].r7,
-                    roundEight: item.score[ 0 ].r8,
-                    roundNine: item.score[ 0 ].r9,
-                    roundTen: item.score[ 0 ].r10,
-                    roundEleven: item.score[ 0 ].r11,
-                    total: item.score[ 0 ].total,
-                    favourite: favourite
-                } );
+                if ( item.score ) {
+
+                    $scope.teams.push( {
+                        id: item._id,
+                        name: teamName,
+                        country: item.country,
+                        setImage: setImage,
+                        imageUrl: imageUrl,
+                        imageName: imageName,
+                        iso: iso,
+                        roundOne: item.score[ 0 ].r1.score,
+                        roundTwo: item.score[ 0 ].r2.score,
+                        roundThree: item.score[ 0 ].r3.score,
+                        roundFour: item.score[ 0 ].r4.score,
+                        roundFive: item.score[ 0 ].r5.score,
+                        roundSix: item.score[ 0 ].r6.score,
+                        roundSeven: item.score[ 0 ].r7.score,
+                        roundEight: item.score[ 0 ].r8.score,
+                        roundNine: item.score[ 0 ].r9.score,
+                        roundTen: item.score[ 0 ].r10.score,
+                        roundEleven: item.score[ 0 ].r11.score,
+                        total: item.score[ 0 ].total,
+                        favourite: favourite
+                    } );
+                }
 
             } );
             $scope.order( '-total' );
