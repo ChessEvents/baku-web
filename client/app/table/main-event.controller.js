@@ -4,7 +4,8 @@
     angular.module( 'app.main-event' )
         .controller( 'TableCtrl', [ '$scope', '$filter', '$http', '$mdToast',
             '$cookies', '$rootScope', '$window', '$stateParams', TableCtrl
-        ] );
+        ] )
+        .filter( 'rankPosition', [ rankPosition ] );
 
     function TableCtrl( $scope, $filter, $http, $mdToast, $cookies, $rootScope, $window, $stateParams ) {
         var init;
@@ -162,6 +163,7 @@
 
                     $scope.teams.push( {
                         id: item._id,
+                        rank: item.roundRank[ 7 ].roundRank,
                         name: teamName,
                         country: item.country,
                         setImage: setImage,
@@ -236,4 +238,29 @@
 
         init();
     }
+
+    function rankPosition() {
+
+        return function ( input ) {
+
+            if( !input ) return 0;
+
+            var lastNumber = String( input );
+
+            if( lastNumber.length > 1 ){
+                lastNumber = lastNumber.substring( input.length - 1 );
+            }
+            if ( lastNumber === "1" ) {
+                return input + 'st';
+            }
+            if( lastNumber === "2" ) {
+                return input + 'nd';
+            }
+            if( lastNumber === "3" ) {
+                return input + 'rd';
+            }
+            return input + 'th';
+        }
+    }
+
 } )();

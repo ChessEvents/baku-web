@@ -1,19 +1,35 @@
 <div class="page page-dashboard" data-ng-controller="DashboardCtrl">
+
     <div class="row">
-        <!-- Stats -->
-        <div class="col-lg-4 col-md-4 col-xsm-6">
-            <div class="panel panel-box">
-                <div class="panel-top">
-                    <span class="zmdi zmdi-account-add color-success"></span>
-                </div>
-                <div class="panel-info">
-                    <span data-translate="ENTRIES"></span>
-                </div>
-                <div class="panel-bottom bg-light">
-                    <span><a href="#/table/main-event">1371</a></span>
+        <div class="col-md-12">
+            <div class="panel panel-default panel-minimal">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 box-stats">
+                            <span class="box-desc">Main Event</span>
+                            <p class="box-num"><a href="#/table/main-event">1,371</a></p>
+                        </div>
+                        <div class="col-md-3 box-stats">
+                            <span class="box-desc">Round</span>
+                            <p class="box-num"><a href="#/table/main-event">8</a></p>
+                        </div>
+                        <div class="col-md-3 box-stats">
+                            <span class="box-desc">Week 2 Sprint</span>
+                            <p class="box-num"><a href="#/table/week-two-sprint">183</a></p>
+                        </div>
+                        <div class="col-md-3 box-stats no-border">
+                            <span class="box-desc">Round</span>
+                            <p class="box-num"><a href="#/table/week-two-sprint">3</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- end row -->
+
+
+    <div class="row">
         <div class="col-lg-4 col-md-4 col-xsm-6">
             <div class="panel panel-box">
                 <div class="panel-top">
@@ -26,6 +42,38 @@
                     <span>89</span>
                 </div>
             </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped no-margin">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Country</th>
+                                    <th>Flag</th>
+                                    <th>Teams</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="country in countries">
+                                    <td>{{ $index + 1 }}</td>
+                                    <td><a ng-href="#/table/main-event/{{country.name}}">{{ country.name }}</a></td>
+                                    <td>
+                                        <span data-ng-hide="country.setImage" class="flag-icon flag-icon-{{ country.iso }}"></span>
+                                        <img data-ng-show="country.setImage" data-ng-src="{{ country.imageUrl }}" alt="country.imageName" />
+                                    </td>
+                                    <td class="text-center">{{ country.count }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div ng-hide="allCountries" class="text-center">
+                        <md-button data-ng-click="getCountries()" class="md-raised btn-w-sm md-primary">more</md-button>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <div class="col-lg-8 col-md-8">
             <div class="panel panel-default">
@@ -75,9 +123,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-lg-8 col-md-8">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h2 class="text-center">Top {{ topWomenCount }} Women Players</h2>
@@ -126,40 +171,5 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped no-margin">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Country</th>
-                                    <th>Flag</th>
-                                    <th>Teams</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-ng-repeat="country in countries">
-                                    <td>{{ $index + 1 }}</td>
-                                    <td><a ng-href="#/table/main-event/{{country.name}}">{{ country.name }}</a></td>
-                                    <td>
-                                        <span data-ng-hide="country.setImage" class="flag-icon flag-icon-{{ country.iso }}"></span>
-                                        <img data-ng-show="country.setImage" data-ng-src="{{ country.imageUrl }}" alt="country.imageName" />
-                                    </td>
-                                    <td class="text-center">{{ country.count }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div ng-hide="allCountries" class="text-center">
-                        <md-button data-ng-click="getCountries()" class="md-raised btn-w-sm md-primary">more</md-button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end stats -->
     </div>
-
-
 </div>

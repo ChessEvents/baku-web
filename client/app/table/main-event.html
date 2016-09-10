@@ -29,6 +29,13 @@
                             <tr>
                                 <th>
                                     <div class="th">
+                                        Pos.
+                                        <span class="fa fa-angle-up" data-ng-click=" order('rank') " data-ng-class="{active: row == 'rank'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-rank') " data-ng-class="{active: row == '-rank'}"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="th">
                                         Teams
                                         <span class="fa fa-angle-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
                                         <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
@@ -95,13 +102,28 @@
                                         <span class="fa fa-angle-down" data-ng-click=" order('-roundSix') " data-ng-class="{active: row == '-roundSix'}"></span>
                                     </div>
                                 </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        R7
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundSeven') " data-ng-class="{active: row == 'roundSeven'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundSeven') " data-ng-class="{active: row == '-roundSeven'}"></span>
+                                    </div>
+                                </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        R8
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundEight') " data-ng-class="{active: row == 'roundEight'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundEight') " data-ng-class="{active: row == '-roundEight'}"></span>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr data-ng-repeat="team in currentPageTeams | filter: countryFilter ">
+                                <td class="text-center text-small">{{ team.rank | rankPosition }}</td>
                                 <td>
                                     <div class="col-xs-6">
-                                        <a ng-href="#/team/{{ team.id }}">
+                                        <a ng-href="#/team/{{ team.id }}?competition=main">
                                         {{ team.name }}
                                     </a>
                                     </div>
@@ -132,6 +154,8 @@
                                 <td class="text-center">{{ team.roundFour }}</td>
                                 <td class="text-center">{{ team.roundFive }}</td>
                                 <td class="text-center">{{ team.roundSix }}</td>
+                                <td class="text-center">{{ team.roundSeven }}</td>
+                                <td class="text-center">{{ team.roundEight }}</td>
                             </tr>
                         </tbody>
                     </table>
