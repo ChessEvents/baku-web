@@ -65,7 +65,6 @@
             $nav = $('#nav-container');
 
             $a.on('click', function(event) {
-                console.log( 'CLICKED ');
                 var $parent, $this;
                 if ($app.hasClass('nav-collapsed-min') || ($nav.hasClass('nav-horizontal') && $window.width() >= 768)) {
                     return false;

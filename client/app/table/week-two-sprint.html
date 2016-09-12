@@ -51,11 +51,6 @@
                                 <th class="text-center">
                                     <div class="th">
                                         Country
-                                    </div>
-                                </th>
-                                <th ng-hide="true" class="text-center">
-                                    <div class="th">
-                                        Country
                                         <span class="fa fa-angle-up" data-ng-click=" order('country') " data-ng-class="{active: row == 'country'}"></span>
                                         <span class="fa fa-angle-down" data-ng-click=" order('-country') " data-ng-class="{active: row == '-country'}"></span>
                                     </div>
@@ -81,6 +76,27 @@
                                         <span class="fa fa-angle-down" data-ng-click=" order('-roundThree') " data-ng-class="{active: row == '-roundThree'}"></span>
                                     </div>
                                 </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        R4
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundFour') " data-ng-class="{active: row == 'roundFour'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundFour') " data-ng-class="{active: row == '-roundFour'}"></span>
+                                    </div>
+                                </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        R5
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundFive') " data-ng-class="{active: row == 'roundFive'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundFive') " data-ng-class="{active: row == '-roundFive'}"></span>
+                                    </div>
+                                </th>
+                                <!-- <th class="text-center">
+                                    <div class="th">
+                                        R6
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundSix') " data-ng-class="{active: row == 'roundSix'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundSix') " data-ng-class="{active: row == '-roundSix'}"></span>
+                                    </div>
+                                </th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -104,13 +120,20 @@
                                     </div>
                                 </td>
                                 <td class="info text-center"><strong>{{ team.total }}</strong></td>
-                                <td ng-hide="true" class="info text-center">{{ team.country }}</td>
                                 <td class="text-center">
-                                    {{ team.country }}
+                                    <span data-ng-hide="team.setImage" class="flag-icon flag-icon-{{ team.iso }}">
+                                    </span>
+                                    <img data-ng-show="team.setImage" data-ng-src="{{ team.imageUrl }}" alt="team.imageName" />
+                                    <md-tooltip md-direction="top">
+                                        {{ team.country }}
+                                    </md-tooltip>
                                 </td>
                                 <td class="text-center">{{ team.roundSix }}</td>
                                 <td class="text-center">{{ team.roundSeven }}</td>
                                 <td class="text-center">{{ team.roundEight }}</td>
+                                <td class="text-center">{{ team.roundNine }}</td>
+                                <td class="text-center">{{ team.roundTen }}</td>
+                                <!-- <td class="text-center">{{ team.roundEleven }}</td> -->
                             </tr>
                         </tbody>
                     </table>

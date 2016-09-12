@@ -2,13 +2,18 @@
     'use strict';
 
     angular.module( 'app' )
-        .config( [ '$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider, $http ) {
+        .config( [ '$stateProvider', '$urlRouterProvider', function ( $stateProvider, $urlRouterProvider ) {
             var routes, setRoutes;
 
             $stateProvider.state( 'team', {
                 url: '/team/:id',
                 templateUrl: 'app/page/team-details.html'
             });
+
+            $stateProvider.state( 'player', {
+                url: '/player/:playerId',
+                templateUrl: 'app/player/player.html'
+            } );
 
             $stateProvider.state( 'dashboard', {
                 url: '/dashboard',

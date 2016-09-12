@@ -1,0 +1,65 @@
+<div class="page" data-ng-controller="PlayerCtrl">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default panel-minimal">
+                <div class="panel-heading">Player Info</div>
+                <div class="panel-body">
+                    <dl class="dl-horizontal">
+                        <dt>Name</dt>
+                        <dd>{{ player.name }}</dd>
+                        <br>
+                        <dt>Country</dt>
+                        <dd>{{ player.country }}</dd>
+                        <br>
+                        <dt>Rating</dt>
+                        <dd>{{ player.rating }}</dd>
+                        <br>
+                        <dt>Start Rank</dt>
+                        <dd>{{ player.rank }}</dd>
+                        <br>
+                        <dt>FIDE</dt>
+                        <dd><a ng-href="https://ratings.fide.com/card.phtml?event={{ player.id}}" target="_blank">{{ player.id }}</a></dd>
+                        <br>
+                        <dt>Chess-Results<dt>
+                        <dd><a ng-href="{{ chessResultsUrl }}" target="_blank">Result View</a><dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider divider-lg"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Round</th>
+                                    <th>Opponent</th>
+                                    <th class="text-center">Rating</th>
+                                    <th class="text-center">Result</th>
+                                    <th class="text-center">Points</th>
+                                    <th class="text-center">Chess24</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="round in player.roundResults">
+                                    <td class="text-center">{{ round.round }}</td>
+                                    <td>{{ round.opponent }}</td>
+                                    <td class="text-center">{{ round.opponentRating }}</td>
+                                    <td class="text-center">{{ round.result }}</td>
+                                    <td class="text-center">{{ round.points }}</td>
+                                    <td class="text-center"><a ng-href="https://chess24.com/en/watch/live-tournaments/42nd-chess-olympiad-baku-2016-{{ player.eventType}}{{ round.chess24Url }}" target="_blank">view game</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

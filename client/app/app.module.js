@@ -7,6 +7,7 @@
 
         // Custom Feature modules
         ,'app.page'
+        ,'app.player',
         ,'app.main-event'
         ,'app.week-two-sprint'
 

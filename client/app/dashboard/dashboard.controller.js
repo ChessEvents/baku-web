@@ -11,20 +11,69 @@
         $scope.allCountries = false;
         $scope.getCountries = getCountries;
 
+        getCountries( 20 );
+
+        // top players in the Olympiad:
         $scope.topOpen = [];
         $scope.allTopOpen = false;
         $scope.getTopOpen = getTopOpen;
-        $scope.topMenCount = 10;
+        $scope.topOpenCount = 10;
 
         $scope.topWomen = [];
         $scope.allTopWomen = false;
         $scope.topWomenCount = 10;
         $scope.getTopWomen = getTopWomen;
 
-
-        getCountries( 20 );
-        getTopOpen( $scope.topMenCount );
+        getTopOpen( $scope.topOpenCount );
         getTopWomen( $scope.topWomenCount );
+        //
+
+        // most picked players in the olympiad:
+        $scope.mostPickedOpen = [];
+        $scope.allMostPickedOpen = false;
+        $scope.getMostPickedOpen = getMostPickedOpen;
+        $scope.mostPickedOpenCount = 10;
+
+        $scope.mostPickedWomen = [];
+        $scope.allMostPickedWomen = false;
+        $scope.getMostPickedWomen = getMostPickedWomen;
+        $scope.mostPickedWomenCount = 10;
+
+        getMostPickedOpen( $scope.mostPickedOpenCount );
+        getMostPickedWomen( $scope.mostPickedWomenCount );
+        //
+
+        function getMostPickedOpen( count ) {
+            var total = 0;
+            if( ! count ) $scope.allMostPickedOpen = true;
+            $scope.mostPickedOpen.length = 0;
+
+            $http.get( 'app/data/most-picked/open.json' ).then( function( players ) {
+
+                players.data.forEach( function( player ) {
+                    if( total === count ) return;
+                    $scope.mostPickedOpen.push( player )
+                    total++;
+                });
+                $scope.mostPickedOpenCount = $scope.mostPickedOpen.length;
+            });
+        }
+
+        function getMostPickedWomen( count ) {
+            var total = 0;
+            if( ! count ) $scope.allMostPickedWomen = true;
+            $scope.mostPickedWomen.length = 0;
+
+            $http.get( 'app/data/most-picked/women.json' ).then( function( players ) {
+
+                players.data.forEach( function( player ) {
+                    if( total === count ) return;
+                    $scope.mostPickedWomen.push( player )
+                    total++;
+                });
+                $scope.mostPickedWomenCount = $scope.mostPickedWomen.length;
+            });
+        }
 
         function getTopOpen( count ) {
             var total = 0;
@@ -39,7 +88,7 @@
                     $scope.topOpen.push( player );
                     total++;
                 });
-                $scope.topMenCount = $scope.topOpen.length;
+                $scope.topOpenCount = $scope.topOpen.length;
 
             } );
         }
@@ -133,6 +182,5 @@
             return score;
         }
     }
-
 
 } )();

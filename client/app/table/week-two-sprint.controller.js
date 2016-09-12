@@ -10,6 +10,10 @@
     function W2SCtrl( $scope, $filter, $http, $mdToast, $cookies, $rootScope, $window, $stateParams ) {
         var init;
 
+        var now = new $window.Date(),
+            // this will set the expiration to 6 months
+            exp = new $window.Date( now.getFullYear(), now.getMonth() + 6, now.getDate() );
+
         $window.mobilecheck = function () {
             var check = false;
             ( function ( a ) {
@@ -88,7 +92,9 @@
                         $cookies.putObject( team.id, [ {
                             team: team.name,
                             id: team.id
-                        } ] );
+                        } ],{
+                            expires: exp
+                        } );
 
                         console.log( 'cookie added.', team.id, cookies.length );
                     }
@@ -160,7 +166,7 @@
 
                     $scope.teams.push( {
                         id: item._id,
-                        rank: item.roundRank[ 7 ].roundRank,
+                        rank: item.roundRank[ 9 ].roundRank,
                         name: teamName,
                         country: item.country,
                         setImage: setImage,

@@ -116,6 +116,27 @@
                                         <span class="fa fa-angle-down" data-ng-click=" order('-roundEight') " data-ng-class="{active: row == '-roundEight'}"></span>
                                     </div>
                                 </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        R9
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundNine') " data-ng-class="{active: row == 'roundNine'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundNine') " data-ng-class="{active: row == '-roundNine'}"></span>
+                                    </div>
+                                </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        R10
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundTen') " data-ng-class="{active: row == 'roundTen'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundTen') " data-ng-class="{active: row == '-roundTen'}"></span>
+                                    </div>
+                                </th>
+                                <!-- <th class="text-center">
+                                    <div class="th">
+                                        R11
+                                        <span class="fa fa-angle-up" data-ng-click=" order('roundEleven') " data-ng-class="{active: row == 'roundEleven'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-roundEleven') " data-ng-class="{active: row == '-roundEleven'}"></span>
+                                    </div>
+                                </th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -156,6 +177,9 @@
                                 <td class="text-center">{{ team.roundSix }}</td>
                                 <td class="text-center">{{ team.roundSeven }}</td>
                                 <td class="text-center">{{ team.roundEight }}</td>
+                                <td class="text-center">{{ team.roundNine }}</td>
+                                <td class="text-center">{{ team.roundTen }}</td>
+                                <!-- <td class="text-center">{{ team.roundEleven }}</td> -->
                             </tr>
                         </tbody>
                     </table>
