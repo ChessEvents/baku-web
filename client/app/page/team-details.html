@@ -12,7 +12,7 @@
                 <li>
                     <a href="#/table/{{ eventPage }}">
                         <span class="ui-highlight colored">
-                            <i class="fa fa-trophy success"></i> <span class="">{{ rank[ 9 ].roundRank | rankPosition }}</span> overall
+                            <i class="fa fa-trophy success"></i> <span class="">{{ rank[ 11 ].roundRank | rankPosition }}</span> overall
                 </span>
                 </a>
                 </li>
@@ -33,17 +33,18 @@
                                 <th class="text-center">Title</th>
                                 <th class="text-center">Rating</th>
                                 <th class="text-center">Team</th>
-                                <th ng-hide="isW2S" class="text-center">Round 1</th>
-                                <th ng-hide="isW2S" class="text-center">Round 2</th>
-                                <th ng-hide="isW2S" class="text-center">Round 3</th>
-                                <th ng-hide="isW2S" class="text-center">Round 4</th>
-                                <th ng-hide="isW2S" class="text-center">Round 5</th>
-                                <th class="text-center">Round 6</th>
-                                <th class="text-center">Round 7</th>
-                                <th class="text-center">Round 8</th>
-                                <th class="text-center">Round 9</th>
-                                <th class="text-center">Round 10</th>
-                                <!-- <th class="text-center">Round 11</th> -->
+                                <th ng-hide="isW2S" class="text-center">R1</th>
+                                <th ng-hide="isW2S" class="text-center">R2</th>
+                                <th ng-hide="isW2S" class="text-center">R3</th>
+                                <th ng-hide="isW2S" class="text-center">R4</th>
+                                <th ng-hide="isW2S" class="text-center">R5</th>
+                                <th class="text-center">R6</th>
+                                <th class="text-center">R7</th>
+                                <th class="text-center">R8</th>
+                                <th class="text-center">R9</th>
+                                <th class="text-center">R10</th>
+                                <th class="text-center">R11</th>
+                                <th class="text-center">Bonus</th>
                                 <th class="text-center">Total</th>
                             </tr>
                         </thead>
@@ -67,7 +68,8 @@
                                 <td class="text-center"><a ui-wave popover-placement="top" popover-title="Game Info" uib-popover-html="player.r8.opponent" popover-append-to-body="true">{{ player.r8.points || 0 }}</a></td>
                                 <td class="text-center"><a ui-wave popover-placement="top" popover-title="Game Info" uib-popover-html="player.r9.opponent" popover-append-to-body="true">{{ player.r9.points || 0 }}</a></td>
                                 <td class="text-center"><a ui-wave popover-placement="top" popover-title="Game Info" uib-popover-html="player.r10.opponent" popover-append-to-body="true">{{ player.r10.points || 0 }}</a></td>
-                                <!-- <td class="text-center"><a ui-wave popover-placement="top" popover-title="Game Info" uib-popover-html="player.r11.opponent" popover-append-to-body="true">{{ player.r11.points || 0 }}</a></td> -->
+                                <td class="text-center"><a ui-wave popover-placement="top" popover-title="Game Info" uib-popover-html="player.r11.opponent" popover-append-to-body="true">{{ player.r11.points || 0 }}</a></td>
+                                <td class="text-center danger"> - </td>
                                 <td class="text-center warning">
                                     {{ player.r1.points + player.r2.points + player.r3.points + player.r4.points + player.r5.points + player.r6.points + player.r7.points + player.r8.points + player.r9.points + player.r10.points + player.r11.points }}
                                 </td>
@@ -86,7 +88,8 @@
                                 <td class="text-center">{{ score.r8.score }} </td>
                                 <td class="text-center">{{ score.r9.score }} </td>
                                 <td class="text-center">{{ score.r10.score }} </td>
-                                <!-- <td class="text-center">{{ score.r11.score }} </td> -->
+                                <td class="text-center">{{ score.r11.score }} </td>
+                                <td class="text-center">{{ score.bonus.score }} </td>
                                 <td class="text-center"><strong>{{ score.total }}</strong></td>
                             </tr>
                             <tr class="bg-dark">
@@ -101,7 +104,8 @@
                                 <td class="text-center"><span ng-show="rank[7].round">{{ rank[7].roundRank | rankPosition }}</span></td>
                                 <td class="text-center"><span ng-show="rank[8].round">{{ rank[8].roundRank | rankPosition }}</span></td>
                                 <td class="text-center"><span ng-show="rank[8].round">{{ rank[9].roundRank | rankPosition }}</span></td>
-                                <!-- <td class="text-center"><span ng-show="rank[8].round">{{ rank[10].roundRank | rankPosition }}</span></td> -->
+                                <td class="text-center"><span ng-show="rank[8].round">{{ rank[10].roundRank | rankPosition }}</span></td>
+                                <td class="text-center"><span ng-show="rank[8].round">{{ rank[11].roundRank | rankPosition }}</span></td>
                                 <td></td>
                             </tr>
                         </tfoot>
@@ -119,7 +123,7 @@
                 </div>
                 <div class="panel-heading">Round by Round Progress</div>
                 <div class="panel-body">
-                    <p class="lead">See how your teams has performaned during this years Fantasy Chess Olympiad!</p>
+                    <p class="lead">See how your team has performed during this years' Fantasy Chess Olympiad!</p>
                 </div>
             </div>
         </div>
@@ -146,42 +150,42 @@
                                 <tr>
                                     <td>Open section Gold medal winners</td>
                                     <td>{{ openGold }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.openGold }} </td>
                                 </tr>
                                 <tr>
                                     <td>Open section Silver medal winners</td>
                                     <td>{{ openSilver }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.openSilver }} </td>
                                 </tr>
                                 <tr>
                                     <td>Open section Bronze medal winners</td>
                                     <td>{{ openBronze }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.openBronze }} </td>
                                 </tr>
                                 <tr>
                                     <td>Open section individual Gold medal winner</td>
                                     <td>{{ openIndGold }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.openIndGold }} </td>
                                 </tr>
                                 <tr>
                                     <td>Women's section Gold medal winners</td>
                                     <td>{{ womenGold }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.womenGold }} </td>
                                 </tr>
                                 <tr>
                                     <td>Women's section Silver medal winners</td>
                                     <td>{{ womenSilver }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.womenSilver }} </td>
                                 </tr>
                                 <tr>
                                     <td>Women's section Bronze medal winners</td>
                                     <td>{{ womenBronze }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.womenBronze }} </td>
                                 </tr>
                                 <tr>
                                     <td>Women's section individual Gold medal winner</td>
                                     <td>{{ womenIndGold }}</td>
-                                    <td class="text-center"> - </td>
+                                    <td class="text-center"> {{ bonusScore.womenIndGold }} </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -190,13 +194,11 @@
             </div>
         </div>
     </div>
-
-
     <p>
         All photos used are from the
         <a href="http://www1.bakuchessolympiad.com">official website</a> (
-        <a href="http://www1.bakuchessolympiad.com/photos/223">during round 10</a> )
-        <br> &copy; Eteri Kublashvili, Maria Emelianova, Lana Afandiyeva, Lana Afandiyeva
+        <a href="http://www1.bakuchessolympiad.com/photos/228">during round 11</a> )
+        <br> &copy; Eteri Kublashvili
     </p>
 
 </div>

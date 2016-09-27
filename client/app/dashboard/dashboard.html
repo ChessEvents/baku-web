@@ -11,7 +11,7 @@
                         </div>
                         <div class="col-md-6 box-stats no-border">
                             <span class="box-desc">Round</span>
-                            <p class="box-num"><a href="#/table/main-event">10 of 11</a></p>
+                            <p class="box-num"><a href="#/table/main-event">11 of 11</a></p>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="col-md-6 box-stats no-border">
                             <span class="box-desc">Round</span>
-                            <p class="box-num"><a href="#/table/week-two-sprint">5 of 6</a></p>
+                            <p class="box-num"><a href="#/table/week-two-sprint">6 of 6</a></p>
                         </div>
                     </div>
                 </div>
@@ -39,72 +39,6 @@
 
     <div class="row">
         <div class="col-lg-8 col-md-8">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h2 class="text-center">Most Frequently Selected Open Players</h2>
-                    <div class="table-responsive">
-                        <table class="table table-striped no-margin table-condensed table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Name</th>
-                                    <th class="text-center">Picked</th>
-                                    <th class="text-center">Country</th>
-                                    <th class="text-center">Rating</th>
-                                    <th class="text-center">Board</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-ng-repeat="player in mostPickedOpen">
-                                    <td class="text-center">{{ $index + 1 }}</td>
-                                    <td><a ng-href="#/player/{{ player._id}}">{{ player.name }}</a></td>
-                                    <td class="success text-center"><strong>{{ player.picked }}</strong></td>
-                                    <td class="text-center">{{ player.country }}</td>
-                                    <td class="text-center">{{ player.rating }}</td>
-                                    <td class="text-center">{{ player.board }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="divider divider-lg"></div>
-                    <div ng-hide="allMostPickedOpen" class="text-center">
-                        <md-button data-ng-click="getMostPickedOpen()" class="md-raised btn-w-sm md-primary">more</md-button>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h2 class="text-center">Most Frequently Selected Women Players</h2>
-                    <div class="table-responsive">
-                        <table class="table table-striped no-margin table-condensed table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Name</th>
-                                    <th class="text-center">Pick</th>
-                                    <th class="text-center">Country</th>
-                                    <th class="text-center">Rating</th>
-                                    <th class="text-center">Board</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr data-ng-repeat="player in mostPickedWomen">
-                                    <td class="text-center">{{ $index + 1 }}</td>
-                                    <td><a ng-href="#/player/{{ player._id}}">{{ player.name }}</a></td>
-                                    <td class="success text-center"><strong>{{ player.picked }}</strong></td>
-                                    <td class="text-center">{{ player.country }}</td>
-                                    <td class="text-center">{{ player.rating }}</td>
-                                    <td class="text-center">{{ player.board }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="divider divider-lg"></div>
-                    <div ng-hide="allMostPickedWomen" class="text-center">
-                        <md-button data-ng-click="getMostPickedWomen()" class="md-raised btn-w-sm md-primary">more</md-button>
-                    </div>
-                </div>
-            </div>
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h2 class="text-center">Top {{ topOpenCount }} Open Players</h2>
@@ -196,6 +130,72 @@
                     </p>
                     <div ng-hide="allTopWomen" class="text-center">
                         <md-button data-ng-click="getTopWomen()" class="md-raised btn-w-sm md-primary">more</md-button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="text-center">Most Frequently Selected Open Players</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped no-margin table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Name</th>
+                                    <th class="text-center">Picked</th>
+                                    <th class="text-center">Country</th>
+                                    <th class="text-center">Rating</th>
+                                    <th class="text-center">Board</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="player in mostPickedOpen">
+                                    <td class="text-center">{{ $index + 1 }}</td>
+                                    <td><a ng-href="#/player/{{ player._id}}">{{ player.name }}</a></td>
+                                    <td class="success text-center"><strong>{{ player.picked }}</strong></td>
+                                    <td class="text-center">{{ player.country }}</td>
+                                    <td class="text-center">{{ player.rating }}</td>
+                                    <td class="text-center">{{ player.board }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="divider divider-lg"></div>
+                    <div ng-hide="allMostPickedOpen" class="text-center">
+                        <md-button data-ng-click="getMostPickedOpen()" class="md-raised btn-w-sm md-primary">more</md-button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h2 class="text-center">Most Frequently Selected Women Players</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped no-margin table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Name</th>
+                                    <th class="text-center">Pick</th>
+                                    <th class="text-center">Country</th>
+                                    <th class="text-center">Rating</th>
+                                    <th class="text-center">Board</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-ng-repeat="player in mostPickedWomen">
+                                    <td class="text-center">{{ $index + 1 }}</td>
+                                    <td><a ng-href="#/player/{{ player._id}}">{{ player.name }}</a></td>
+                                    <td class="success text-center"><strong>{{ player.picked }}</strong></td>
+                                    <td class="text-center">{{ player.country }}</td>
+                                    <td class="text-center">{{ player.rating }}</td>
+                                    <td class="text-center">{{ player.board }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="divider divider-lg"></div>
+                    <div ng-hide="allMostPickedWomen" class="text-center">
+                        <md-button data-ng-click="getMostPickedWomen()" class="md-raised btn-w-sm md-primary">more</md-button>
                     </div>
                 </div>
             </div>

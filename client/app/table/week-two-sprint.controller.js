@@ -166,7 +166,7 @@
 
                     $scope.teams.push( {
                         id: item._id,
-                        rank: item.roundRank[ 9 ].roundRank,
+                        rank: item.roundRank[ 11 ].roundRank,
                         name: teamName,
                         country: item.country,
                         setImage: setImage,
@@ -184,6 +184,7 @@
                         roundNine: item.score[ 0 ].r9.score,
                         roundTen: item.score[ 0 ].r10.score,
                         roundEleven: item.score[ 0 ].r11.score,
+                        bonusPoints: item.bonusScore.total,
                         total: item.score[ 0 ].total,
                         favourite: favourite
                     } );

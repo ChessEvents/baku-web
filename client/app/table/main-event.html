@@ -6,6 +6,15 @@
         </div>
         <div class="col-md-12">
             <section ng-show="loading" class="panel panel-default">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 text-center">
+                        <br>
+                        <img ng-src="images/loading.gif" alt="Loading..." />
+                        <br>
+                        <h3 class="text-primary">Loading results...</h3>
+                        <br>
+                    </div>
+                </div>
             </section>
             <section ng-hide="loading" class="panel panel-default table-dynamic">
                 <div class="table-filters">
@@ -58,6 +67,13 @@
                                         Country
                                         <span class="fa fa-angle-up" data-ng-click=" order('country') " data-ng-class="{active: row == 'country'}"></span>
                                         <span class="fa fa-angle-down" data-ng-click=" order('-country') " data-ng-class="{active: row == '-country'}"></span>
+                                    </div>
+                                </th>
+                                <th class="text-center">
+                                    <div class="th">
+                                        Bonus
+                                        <span class="fa fa-angle-up" data-ng-click=" order('bonusPoints') " data-ng-class="{active: row == 'bonusPoints'}"></span>
+                                        <span class="fa fa-angle-down" data-ng-click=" order('-bonusPoints') " data-ng-class="{active: row == '-bonusPoints'}"></span>
                                     </div>
                                 </th>
                                 <th class="text-center">
@@ -130,13 +146,13 @@
                                         <span class="fa fa-angle-down" data-ng-click=" order('-roundTen') " data-ng-class="{active: row == '-roundTen'}"></span>
                                     </div>
                                 </th>
-                                <!-- <th class="text-center">
+                                <th class="text-center">
                                     <div class="th">
                                         R11
                                         <span class="fa fa-angle-up" data-ng-click=" order('roundEleven') " data-ng-class="{active: row == 'roundEleven'}"></span>
                                         <span class="fa fa-angle-down" data-ng-click=" order('-roundEleven') " data-ng-class="{active: row == '-roundEleven'}"></span>
                                     </div>
-                                </th> -->
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -169,6 +185,7 @@
                                         {{ team.country }}
                                     </md-tooltip>
                                 </td>
+                                <td class="warning text-center">{{ team.bonusPoints }}</td>
                                 <td class="text-center">{{ team.roundOne }}</td>
                                 <td class="text-center">{{ team.roundTwo }}</td>
                                 <td class="text-center">{{ team.roundThree }}</td>
@@ -179,7 +196,7 @@
                                 <td class="text-center">{{ team.roundEight }}</td>
                                 <td class="text-center">{{ team.roundNine }}</td>
                                 <td class="text-center">{{ team.roundTen }}</td>
-                                <!-- <td class="text-center">{{ team.roundEleven }}</td> -->
+                                <td class="text-center">{{ team.roundEleven }}</td>
                             </tr>
                         </tbody>
                     </table>

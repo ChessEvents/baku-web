@@ -6,6 +6,7 @@
          'app.core'
 
         // Custom Feature modules
+        ,'app.home'
         ,'app.page'
         ,'app.player',
         ,'app.main-event'

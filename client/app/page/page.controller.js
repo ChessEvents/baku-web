@@ -16,17 +16,18 @@
         }
 
         $scope.teamName = 'blank';
-        $scope.random = Math.floor( Math.random() * ( 5 - 1 + 1 ) ) + 1;
+        $scope.random = 1; //Math.floor( Math.random() * ( 5 - 1 + 1 ) ) + 1;
         var womenUrl = 'http://chess-results.com/tnr232876.aspx?lan=1&art=9&flag=30&wi=821&snr=';
         var openUrl = 'http://chess-results.com/tnr232875.aspx?lan=1&art=9&flag=30&wi=821&snr=';
         var chess24Url = 'https://chess24.com/en/watch/live-tournaments/42nd-chess-olympiad-baku-2016-'
 
 
-        $http.get( 'app/data/round-10/' + $stateParams.id + '.json' ).then( function ( team ) {
+        $http.get( 'app/data/round-11-bonus/' + $stateParams.id + '.json' ).then( function ( team ) {
 
             $scope.teamName = team.data.teamName;
             $scope.score = team.data.score[ 0 ];
             $scope.country = team.data.country;
+            $scope.bonusScore = team.data.bonusScore;
 
             // bonus point questions:
             $scope.openGold = team.data.openGold;
@@ -91,10 +92,10 @@
 
             // Line Chart
 
-            $scope.lineLabels = [ "round 1", "round 2", "round 3", "round 4", "round 5", "round 6", "round 7", "round 8", "round 9", "round 10" ];
+            $scope.lineLabels = [ "round 1", "round 2", "round 3", "round 4", "round 5", "round 6", "round 7", "round 8", "round 9", "round 10", "round 11" ];
             $scope.scaleMax = 1371;
             if ( $scope.isW2S ) {
-                $scope.lineLabels = [ "round 1", "round 2", "round 3", "round 4", "round 5" ];
+                $scope.lineLabels = [ "round 1", "round 2", "round 3", "round 4", "round 5", "round 6" ];
                 $scope.scaleMax = 183;
             }
 
@@ -124,10 +125,6 @@
             // END
 
         } );
-
-
-
-
     }
 
     function rankPosition() {
